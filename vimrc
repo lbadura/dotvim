@@ -1,5 +1,9 @@
 " mój .vimrc - lukasz@niebo.net
 
+" pathogen
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
 set shortmess+=I " disable the welcome screen
 set complete+=k " enable dictionary completion
 set completeopt+=longest
