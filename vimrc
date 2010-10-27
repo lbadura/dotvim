@@ -33,7 +33,8 @@ set directory=/tmp " swap file directory
 set nocompatible
 set expandtab
 set history=150
-set relativenumber
+"set relativenumber
+set number
 set t_Co=256
 set spelllang=pl " domyślnie sprawdza pisownię po polsku
 set wildmenu
@@ -41,7 +42,6 @@ set nospell " domyślnie sprawdzanie pisowni jest wyłączone
 set ruler<
 set hlsearch
 set laststatus=2
-set statusline=%m%r\ %f\ %=::\ %{Tlist_Get_Tagname_By_Line()}\ \ %l/%L\ (%p%%)
 set linespace=4
 " highlight matching braces
 set showmatch
@@ -75,7 +75,7 @@ colorscheme molokai
 "colorscheme ir_black
 if has("gui_running")
     "set guifont=Liberation\ Mono\ 12
-    set guifont=Inconsolata\ Medium\ 14
+    set guifont=Inconsolata\ Medium\ 16
     set columns=174
     set lines=48
 endif
@@ -146,10 +146,6 @@ nmap <leader>v :tabedit $MYVIMRC<CR>
  nnoremap <down> <nop>
  nnoremap <left> <nop>
  nnoremap <right> <nop>
- inoremap <up> <nop>
- inoremap <down> <nop>
- inoremap <left> <nop>
- inoremap <right> <nop>
  nnoremap j gj
  nnoremap k gk
 
