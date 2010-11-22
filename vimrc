@@ -208,6 +208,7 @@ else
 endif " has("autocmd")
 
 " Maps autocomplete to tab
+set expandtab
 imap <Tab> <C-p>
 " Use Ack instead of Grep when available
 if executable("ack")
