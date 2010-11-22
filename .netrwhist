@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/home/lukasz/workspace/bananascrum/bananascrum/vendor/rails/actionmailer/lib/action_mailer'
 let g:netrw_dirhist_2='/home/lukasz/.mutt'
 let g:netrw_dirhist_3='/home/lukasz/Desktop/sec'
@@ -7,3 +7,4 @@ let g:netrw_dirhist_4='/home/lukasz/workspace/project8/vendor/extensions/active_
 let g:netrw_dirhist_5='/home/lukasz/workspace/smsprep-avak/simpletest'
 let g:netrw_dirhist_6='/home/lukasz/.fontconfig'
 let g:netrw_dirhist_7='/home/lukasz/Downloads/round_buttons'
+let g:netrw_dirhist_8='/home/lukasz/.vim/indent'

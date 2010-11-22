@@ -31,10 +31,10 @@ set backupdir=/tmp " backup dir
 set directory=/tmp " swap file directory
 
 set nocompatible
-set expandtab
 set history=150
 "set relativenumber
 set number
+set numberwidth=5
 set t_Co=256
 set spelllang=pl " domyślnie sprawdza pisownię po polsku
 set wildmenu
@@ -81,8 +81,6 @@ if has("gui_running")
 endif
 hi statusline ctermfg=grey
 
-set autoindent " wcięcia automatiko
-set smartindent " smartindent! :)
 set nobackup " brak backupu
 
 " key mapping
@@ -166,14 +164,63 @@ nmap <leader>v :tabedit $MYVIMRC<CR>
  let NERDTreeHighlightCursorline = 1
  let NERDTreeMouseMode = 2
 
- filetype plugin indent on
+
  set modelines=0
+ " Softtabs, 2 spaces
  set tabstop=2
  set shiftwidth=2
- set softtabstop=2
- set expandtab
 
  set ignorecase
  set smartcase
  set gdefault
  nnoremap <leader><space> :noh<cr>
+
+" Only do this part when compiled with support for autocommands.
+if has("autocmd")
+
+  " Enable file type detection.
+  " Use the default filetype settings, so that mail gets 'tw' set to 72,
+  " 'cindent' is on in C files, etc.
+  " Also load indent files, to automatically do language-dependent indenting.
+  filetype plugin indent on
+
+  " Put these in an autocmd group, so that we can delete them easily.
+  augroup vimrcEx
+  au!
+
+  " For all text files set 'textwidth' to 78 characters.
+  autocmd FileType text setlocal textwidth=78
+
+  " When editing a file, always jump to the last known cursor position.
+  " Don't do it when the position is invalid or when inside an event handler
+  " (happens when dropping a file on gvim).
+  autocmd BufReadPost *
+    \ if line("'\"") > 0 && line("'\"") <= line("$") |
+    \   exe "normal g`\"" |
+    \ endif
+
+  augroup END
+
+else
+
+  set autoindent		" always set autoindenting on
+
+endif " has("autocmd")
+
+" Maps autocomplete to tab
+imap <Tab> <C-p>
+" Use Ack instead of Grep when available
+if executable("ack")
+  set grepprg=ack\ -H\ --nogroup\ --nocolor
+endif
+
+" Snippets are activated by Shift+Tab
+let g:snippetsEmu_key = "<S-Tab>"
+
+" Tab completion options
+set wildmode=list:longest,list:full
+set complete=.,w,t
+
+" Tags
+let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
+
