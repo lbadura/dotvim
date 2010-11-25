@@ -69,8 +69,8 @@ syntax on " podświetlanie składni
 set nocompatible " vim nie vi
 runtime! plugins/matchit.vim
 
-"colorscheme herald
-colorscheme molokai
+colorscheme herald
+"colorscheme molokai
 "colorscheme vibrantink
 "colorscheme ir_black
 if has("gui_running")
@@ -207,9 +207,9 @@ else
 
 endif " has("autocmd")
 
-" Maps autocomplete to tab
+" Maps autocomplete to NetBeans like shortcut
 set expandtab
-imap <Tab> <C-p>
+imap <s-Tab> <C-p>
 " Use Ack instead of Grep when available
 if executable("ack")
   set grepprg=ack\ -H\ --nogroup\ --nocolor
