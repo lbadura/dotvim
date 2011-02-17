@@ -1,10 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/home/lukasz/workspace/bananascrum/bananascrum/vendor/rails/actionmailer/lib/action_mailer'
-let g:netrw_dirhist_2='/home/lukasz/.mutt'
-let g:netrw_dirhist_3='/home/lukasz/Desktop/sec'
-let g:netrw_dirhist_4='/home/lukasz/workspace/project8/vendor/extensions/active_shipping_calculator/vendor/plugins/active_shipping/lib/active_shipping'
-let g:netrw_dirhist_5='/home/lukasz/workspace/smsprep-avak/simpletest'
-let g:netrw_dirhist_6='/home/lukasz/.fontconfig'
-let g:netrw_dirhist_7='/home/lukasz/Downloads/round_buttons'
-let g:netrw_dirhist_8='/home/lukasz/.vim/indent'
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/lukasz/.ssh'
+let g:netrw_dirhist_2='/home/lukasz/dokumenty/secured'
+let g:netrw_dirhist_3='/home/lukasz/.rvm/gems/ruby-1.9.2-p0@hr4all/gems/webrat-0.7.3'
+let g:netrw_dirhist_4='/home/lukasz/.rvm/gems/ruby-1.9.2-p0@hr4all/gems/factory_girl-1.3.3'
+let g:netrw_dirhist_5='/home/lukasz/.rvm/gems/ruby-1.9.2-p0@hr4all/gems/factory_girl_rails-1.0.1'
+let g:netrw_dirhist_6='/home/lukasz/.vim/.vim'
