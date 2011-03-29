@@ -69,7 +69,8 @@ syntax on " podświetlanie składni
 set nocompatible " vim nie vi
 runtime! plugins/matchit.vim
 
-colorscheme herald
+colorscheme wombat
+"colorscheme herald
 "colorscheme molokai
 "colorscheme vibrantink
 "colorscheme ir_black
