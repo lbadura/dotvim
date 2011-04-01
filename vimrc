@@ -47,13 +47,10 @@ set linespace=4
 set showmatch
 
 "folding settings
-set foldmethod=indent   "fold based on indent
-set foldnestmax=3       "deepest fold is 3 levels
-set nofoldenable        "dont fold by default
-
-"NERT tree
-let NERDTreeMapActivateNode='o'
-nmap <Leader>ft :NERDTreeFind<CR>
+set foldenable " Turn on folding
+set foldmethod=marker " Fold on the marker
+set foldlevel=100 " Don't autofold anything (but I can still fold manually)
+set foldopen=block,hor,mark,percent,quickfix,tag " what movements open folds 
 
 " Taglist plugin
 let Tlist_Inc_Winwidth=0
@@ -75,10 +72,10 @@ colorscheme wombat256
 "colorscheme vibrantink
 "colorscheme ir_black
 if has("gui_running")
-    "set guifont=Liberation\ Mono\ 12
-    set guifont=Inconsolata\ Medium\ 16
-    set columns=174
-    set lines=48
+  "set guifont=Liberation\ Mono\ 12
+  set guifont=Inconsolata\ Medium\ 16
+  set columns=174
+  set lines=48
 endif
 hi statusline ctermfg=grey
 
@@ -106,6 +103,7 @@ set wildmenu
 set guioptions-=T
 set guioptions-=m
 set autowrite
+set autoread
 
 " set mapleader
 let mapleader = ","
@@ -117,10 +115,10 @@ nmap <leader>b :b#<cr>
 set noerrorbells
 set novisualbell
 set t_vb=
- 
+
 " set some magic
 set magic
- 
+
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
@@ -131,52 +129,58 @@ set completeopt=longest,menu
 
 let mapleader = ","
 nmap <leader>v :tabedit $MYVIMRC<CR>
- 
+
 " Change color of omnicomplete menu
- hi Pmenu        guibg=#3a6595 guifg=#9aadd5
- hi PmenuSel     guibg=#4a85ba guifg=#b0d0f0 
+hi Pmenu        guibg=#3a6595 guifg=#9aadd5
+hi PmenuSel     guibg=#4a85ba guifg=#b0d0f0 
 
- " use F1 for something useful
- map <F1> <esc>
- imap <F1> <esc>
+" use F1 for something useful
+map <F1> <esc>
+imap <F1> <esc>
 
- " learn writing with no arrows
- nnoremap <up> <nop>
- nnoremap <down> <nop>
- nnoremap <left> <nop>
- nnoremap <right> <nop>
- nnoremap j gj
- nnoremap k gk
-
-
- " Taglist
- let Tlist_Show_One_File = 1
- let Tlist_Use_Right_Window = 1
- let Tlist_GainFocus_On_ToggleOpen = 1
- let Tlist_Exit_OnlyWindow = 1
- let Tlist_Close_On_Select = 1
- let Tlist_Auto_Update = 1
- let Tlist_Close_On_Select = 1
- let Tlist_Exit_OnlyWindow = 1
- let Tlist_Use_Right_Window = 1
- let Tlist_GainFocus_On_ToggleOpen = 1
- let NERDChristmasTree = 1
- let NERDTreeChDirMode = 0
- let NERDTreeHighlightCursorline = 1
- let NERDTreeMouseMode = 2
- let NERDTreeMinimalUI=1
- let NERDTreeDirArrows=1
+" learn writing with no arrows
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+nnoremap j gj
+nnoremap k gk
 
 
- set modelines=0
- " Softtabs, 2 spaces
- set tabstop=2
- set shiftwidth=2
+" Taglist
+let Tlist_Show_One_File = 1
+let Tlist_Use_Right_Window = 1
+let Tlist_GainFocus_On_ToggleOpen = 1
+let Tlist_Exit_OnlyWindow = 1
+let Tlist_Close_On_Select = 1
+let Tlist_Auto_Update = 1
+let Tlist_Close_On_Select = 1
+let Tlist_Exit_OnlyWindow = 1
+let Tlist_Use_Right_Window = 1
+let Tlist_GainFocus_On_ToggleOpen = 1
 
- set ignorecase
- set smartcase
- set gdefault
- nnoremap <leader><space> :noh<cr>
+
+"NERD tree
+let NERDTreeMapActivateNode='o'
+nmap <Leader>ft :NERDTreeFind<CR>
+
+let NERDChristmasTree = 1
+let NERDTreeChDirMode = 0
+let NERDTreeHighlightCursorline = 1
+let NERDTreeMouseMode = 2
+let NERDTreeMinimalUI=1
+let NERDTreeDirArrows=1
+
+
+set modelines=0
+" Softtabs, 2 spaces
+set tabstop=2
+set shiftwidth=2
+
+set ignorecase
+set smartcase
+set gdefault
+nnoremap <leader><space> :noh<cr>
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
@@ -189,20 +193,25 @@ if has("autocmd")
 
   " Put these in an autocmd group, so that we can delete them easily.
   augroup vimrcEx
-  au!
+    au!
 
-  " For all text files set 'textwidth' to 78 characters.
-  autocmd FileType text setlocal textwidth=78
+    " For all text files set 'textwidth' to 78 characters.
+    autocmd FileType text setlocal textwidth=78
 
-  " When editing a file, always jump to the last known cursor position.
-  " Don't do it when the position is invalid or when inside an event handler
-  " (happens when dropping a file on gvim).
-  autocmd BufReadPost *
-    \ if line("'\"") > 0 && line("'\"") <= line("$") |
-    \   exe "normal g`\"" |
-    \ endif
+    " When editing a file, always jump to the last known cursor position.
+    " Don't do it when the position is invalid or when inside an event handler
+    " (happens when dropping a file on gvim).
+    autocmd BufReadPost *
+          \ if line("'\"") > 0 && line("'\"") <= line("$") |
+          \   exe "normal g`\"" |
+          \ endif
 
   augroup END
+
+  "Auto commands
+  au BufRead,BufNewFile {Gemfile,Rakefile,Capfile,*.rake,config.ru}     set ft=ruby
+  au BufRead,BufNewFile {*.md,*.mkd,*.markdown}                         set ft=markdown
+  au BufRead,BufNewFile {COMMIT_EDITMSG}                                set ft=gitcommit
 
 else
 
@@ -228,3 +237,5 @@ set complete=.,w,t
 " Tags
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 
+set splitbelow
+set splitright
