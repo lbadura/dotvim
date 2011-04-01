@@ -69,7 +69,7 @@ syntax on " podświetlanie składni
 set nocompatible " vim nie vi
 runtime! plugins/matchit.vim
 
-colorscheme wombat
+colorscheme wombat256
 "colorscheme herald
 "colorscheme molokai
 "colorscheme vibrantink
@@ -164,6 +164,8 @@ nmap <leader>v :tabedit $MYVIMRC<CR>
  let NERDTreeChDirMode = 0
  let NERDTreeHighlightCursorline = 1
  let NERDTreeMouseMode = 2
+ let NERDTreeMinimalUI=1
+ let NERDTreeDirArrows=1
 
 
  set modelines=0
