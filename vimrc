@@ -1,8 +1,18 @@
 " mój .vimrc - lukasz@niebo.net
 
-" pathogen
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+set rtp+=~/.vim/vundle.git/ 
+ call vundle#rc()
+
+" Bundles:
+Bundle "rails.vim"
+Bundle "ack.vim"
+Bundle "git://git.wincent.com/command-t.git"
+Bundle "The-NERD-Commenter"
+Bundle "Command-T"
+Bundle "The-NERD-tree"
+Bundle "taglist.vim"
+Bundle "yaml.vim"
+Bundle "Vim-Rspec"
 
 set shortmess+=I " disable the welcome screen
 set complete+=k " enable dictionary completion
