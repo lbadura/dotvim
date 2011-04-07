@@ -13,6 +13,10 @@ Bundle "The-NERD-tree"
 Bundle "taglist.vim"
 Bundle "yaml.vim"
 Bundle "Vim-Rspec"
+Bundle "grep.vim"
+Bundle "endwise"
+Bundle "matchit.zip"
+Bundle "snipMate"
 
 set shortmess+=I " disable the welcome screen
 set complete+=k " enable dictionary completion
