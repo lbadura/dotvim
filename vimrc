@@ -14,7 +14,7 @@ Bundle "taglist.vim"
 Bundle "yaml.vim"
 Bundle "Vim-Rspec"
 Bundle "grep.vim"
-Bundle "endwise"
+Bundle "endwise.vim"
 Bundle "matchit.zip"
 Bundle "snipMate"
 
