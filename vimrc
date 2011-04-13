@@ -17,6 +17,8 @@ Bundle "grep.vim"
 Bundle "endwise.vim"
 Bundle "matchit.zip"
 Bundle "snipMate"
+Bundle 'textobj-user'
+Bundle 'textobj-rubyblock'
 
 set shortmess+=I " disable the welcome screen
 set complete+=k " enable dictionary completion
