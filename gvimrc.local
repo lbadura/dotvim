@@ -1,0 +1,6 @@
+set guifont=Inconsolata\ Medium\ 16
+set guioptions-=T
+set guioptions-=m
+set columns=174
+set lines=48
+let g:mapleader = ","

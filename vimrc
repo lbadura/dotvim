@@ -179,7 +179,6 @@ let Tlist_GainFocus_On_ToggleOpen = 1
 "NERD tree
 let NERDTreeMapActivateNode='o'
 nmap <Leader>ft :NERDTreeFind<CR>
-
 let NERDChristmasTree = 1
 let NERDTreeChDirMode = 0
 let NERDTreeHighlightCursorline = 1
