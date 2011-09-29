@@ -4,3 +4,4 @@ set guioptions-=m
 set columns=174
 set lines=48
 let g:mapleader = ","
+colorscheme jellybeans+
