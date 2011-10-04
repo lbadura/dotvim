@@ -1,7 +1,12 @@
-set guifont=Inconsolata\ Medium\ 16
+set guifont=Inconsolata\ Medium\ 14
 set guioptions-=T
 set guioptions-=m
 set columns=174
 set lines=48
 let g:mapleader = ","
 colorscheme jellybeans+
+" colorscheme
+ let g:solarized_termcolors=256
+ set t_Co=16
+ set background=dark
+ colorscheme solarized

@@ -33,3 +33,8 @@ set novisualbell
 " use F1 for something useful
 map <F1> <esc>
 imap <F1> <esc>
+" colorscheme
+ let g:solarized_termcolors=256
+ set t_Co=16
+ set background=dark
+ colorscheme solarized
