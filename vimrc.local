@@ -38,3 +38,6 @@ imap <F1> <esc>
  set t_Co=16
  set background=dark
  colorscheme solarized
+ if has("autocmd") && has("gui") 
+   au GUIEnter * set t_vb= 
+ endif 
