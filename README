@@ -1,4 +1,0 @@
-To use this setup simply link your .vimrc file to vimrc from the project
-directory:
-
-ln ~/.vim/vimrc ~/.vimrc
