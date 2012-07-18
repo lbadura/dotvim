@@ -55,3 +55,6 @@
 [submodule "bundle/vim-zoomwin"]
 	path = bundle/vim-zoomwin
 	url = git://github.com/rphillips/vim-zoomwin.git
+[submodule "bundle/gundo"]
+	path = bundle/gundo
+	url = http://github.com/sjl/gundo.vim.git
