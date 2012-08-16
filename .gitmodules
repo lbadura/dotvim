@@ -6,13 +6,13 @@
 	url = http://github.com/godlygeek/csapprox.git
 [submodule "bundle/vim-endwise"]
 	path = bundle/vim-endwise
-	url = http://github.com/tpope/vim-endwise.git
+	url = git://github.com/tpope/vim-endwise.git
 [submodule "bundle/gist-vim"]
 	path = bundle/gist-vim
 	url = http://github.com/mattn/gist-vim.git
 [submodule "bundle/vim-matchit"]
 	path = bundle/vim-matchit
-	url = http://github.com/edsono/vim-matchit.git
+	url = https://github.com/tsaleh/vim-matchit
 [submodule "bundle/vim-rails"]
 	path = bundle/vim-rails
 	url = http://github.com/tpope/vim-rails.git
@@ -61,3 +61,18 @@
 [submodule "bundle/snipmate.vim"]
 	path = bundle/snipmate.vim
 	url = git://github.com/msanders/snipmate.vim.git
+[submodule "bundle/lusty_explorer"]
+	path = bundle/lusty_explorer
+	url = git://github.com/vim-scripts/LustyExplorer.git
+[submodule "bundle/vim-coffee-script"]
+	path = bundle/vim-coffee-script
+	url = git://github.com/vim-scripts/vim-coffee-script.git
+[submodule "bundle/vim-powerline"]
+	path = bundle/vim-powerline
+	url = git://github.com/Lokaltog/vim-powerline.git
+[submodule "bundle/taglist"]
+	path = bundle/taglist
+	url = git://github.com/vim-scripts/taglist.vim.git
+[submodule "bundle/vim-nerdcommenter"]
+	path = bundle/vim-nerdcommenter
+	url = git://github.com/vim-scripts/The-NERD-Commenter.git
