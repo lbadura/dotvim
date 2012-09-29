@@ -76,3 +76,24 @@
 [submodule "bundle/vim-nerdcommenter"]
 	path = bundle/vim-nerdcommenter
 	url = git://github.com/vim-scripts/The-NERD-Commenter.git
+[submodule "bundle/handlebars"]
+	path = bundle/handlebars
+	url = git://github.com/nono/vim-handlebars.git
+[submodule "Buffet.vim"]
+	path = Buffet.vim
+	url = git://github.com/sandeepcr529/Buffet.vim.git
+[submodule "bundle/buffet"]
+	path = bundle/buffet
+	url = git://github.com/sandeepcr529/Buffet.vim.git
+[submodule "bundle/github-colorscheme"]
+	path = bundle/github-colorscheme
+	url = git://github.com/grillpanda/github-colorscheme.git
+[submodule "bundle/vim-colorschemes"]
+	path = bundle/vim-colorschemes
+	url = git://github.com/flazz/vim-colorschemes.git
+[submodule "bundle/vim-rooter"]
+	path = bundle/vim-rooter
+	url = https://github.com/airblade/vim-rooter.git
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = https://github.com/ervandew/supertab.git

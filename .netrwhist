@@ -1,10 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/home/lukasz/.rvm/gems/ruby-1.9.2-p0@hr4all/gems/webrat-0.7.3'
-let g:netrw_dirhist_2='/home/lukasz/.rvm/gems/ruby-1.9.2-p0@hr4all/gems/jasmine-1.0.1.1'
-let g:netrw_dirhist_3='/home/lukasz/.rvm/gems/ruby-1.9.2-p0@hr4all/bundler/gems/devise-b23e2e807a3d'
-let g:netrw_dirhist_4='/home/lukasz/.rvm/gems/ruby-1.9.2-p0@hr4all/gems/oa-oauth-0.2.0'
-let g:netrw_dirhist_5='/home/lukasz/.rvm/gems/ruby-1.9.2-p0@hr4all/bundler/gems/devise-b23e2e807a3d'
-let g:netrw_dirhist_6='/home/lukasz/.rvm/gems/ruby-1.9.2-p0@hr4all/gems/mysql2-0.2.6'
-let g:netrw_dirhist_7='/home/lukasz/workspace/dotvim/bundle/command-t/ruby/command-t'
-let g:netrw_dirhist_8='/Users/lukaszbadura/workspace/futuresimple/quotes'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/lukaszbadura/workspace/futuresimple/sales/config/gmail_gadget'
+let g:netrw_dirhist_2='/Users/lukaszbadura/.rvm/gems/ruby-1.9.3-p194/gems/oauth-0.4.7'
+let g:netrw_dirhist_3='/Users/lukaszbadura/.rvm/gems/ruby-1.8.7-p249/gems/dropbox-api-0.2.1'
