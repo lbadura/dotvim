@@ -1,3 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
-let g:netrw_dirhist_1='/Users/lukaszbadura/workspace/futuresimple/sleipnir'
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/lukaszbadura/.rvm/gems/ruby-1.9.3-p484/gems/method_struct-0.0.5'
+let g:netrw_dirhist_2='/Users/lukaszbadura/.rvm/gems/ruby-2.1.0/bundler/gems/connoisseur-8d37e05f747b'
+let g:netrw_dirhist_3='/Users/lukaszbadura/.rvm/gems/ruby-2.1.0/gems/kafka-rb-0.0.15'
+let g:netrw_dirhist_4='/Users/lukaszbadura/.rvm/gems/jruby-1.7.9/gems/redstorm-0.6.6'
+let g:netrw_dirhist_5='/Users/lukaszbadura/.rvm/gems/ruby-2.1.1/gems/delayed_job-4.0.0'
+let g:netrw_dirhist_6='/Users/lukaszbadura/.rvm/gems/ruby-1.9.3-p484/bundler/gems/patee-af00d25da625'
+let g:netrw_dirhist_7='/Users/lukaszbadura/.rvm/gems/jruby-1.7.4/gems/redstorm-0.6.6'
+let g:netrw_dirhist_8='/Users/lukaszbadura/.rvm/gems/ruby-2.1.1/gems/redstorm-0.6.6'
