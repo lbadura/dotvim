@@ -1,0 +1,15 @@
+snippet tr "Change selection into a translation key"
+`!p
+import pyperclip
+namespace = 'tasks'
+submodule = 'generic'
+original = re.sub('[\"\']','', snip.v.text)
+key = original.lower()
+key = re.sub('[\.\?]', '', key)
+key = re.sub('[\s\']', '_', key)
+result = string.Template("t(\"$namespace:$submodule.$key\", \"$original\")")
+clip = string.Template("\"$key\": \"$original\",").substitute(key=key, original=original)
+pyperclip.copy(clip)
+snip.rv = result.substitute(namespace=namespace,submodule=submodule,key=key,original=original)
+`
+endsnippet
