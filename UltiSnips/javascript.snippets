@@ -1,8 +1,8 @@
-snippet tr "Change selection into a translation key"
+snippet tr "Change selection into a translation key" w
 `!p
 import pyperclip
-namespace = 'tasks'
-submodule = 'filters'
+namespace = 'app'
+submodule = 'feed.tasks'
 original = re.sub('[\"\']','', snip.v.text)
 key = original.lower()
 key = re.sub('[\.\?]', '', key)
